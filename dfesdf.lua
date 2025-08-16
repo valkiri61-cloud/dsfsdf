@@ -7,7 +7,7 @@ local TweenService = game:GetService("TweenService")
 -- Настройки
 local SETTINGS = {
     GAME_ID = 109983668079237,
-    PASTEFY_URL = "https://raw.githubusercontent.com/DEBIL59195/SERVERLIST/refs/heads/main/SERVERLIST",
+    PASTEFY_URL = "https://raw.githubusercontent.com/valkiri61-cloud/dsfsdf/refs/heads/main/sdasa.lua",
     COOLDOWN_TIME = 5 * 60,
     COUNTDOWN_TIME = 2,
     ERROR_RETRY_DELAY = 3,  -- 3 секунды при ошибке
