@@ -150,13 +150,13 @@ local OBJECT_EMOJIS = {
     ["Job Job Job Sahur"] = "⬜️",
     ["La Supreme Combinasion"] = "🔫",
     ["Admin Lucky Block"] = "🆘",
-    ["Ketupat Kepat"] = "⚰️"
-    ["Spaghetti Tualetti"] = "🚾"
-    ["Strawberry Elephant"] = "🍓"
-    ["Ketchuru and Musturu"] = "🍅"
-    ["Los Bros"] = "👅👄"
-    ["Tralaledon"] = "🤓"
-    ["La Karkerkar Combinasion"] = "🧨"
+    ["Ketupat Kepat"] = "⚰️",
+    ["Spaghetti Tualetti"] = "🚾",
+    ["Strawberry Elephant"] = "🍓",
+    ["Ketchuru and Musturu"] = "🍅",
+    ["Los Bros"] = "👅👄",
+    ["Tralaledon"] = "🤓",
+    ["La Karkerkar Combinasion"] = "🧨",
     ["Los Nooo My Hotspotsitos"] = "🦻"
 }
 
