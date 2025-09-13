@@ -199,6 +199,45 @@ local MUTATION_EMOJIS = {
     ["Bloodrot"] = "🟥",
     ["Galaxy"] = "🟪"
 }
+
+-- Список объектов
+local OBJECT_NAMES = {
+    "La Vacca Saturno Saturnita",
+    "Chimpanzini Spiderini",
+    "Los Tralaleritos",
+    "Las Tralaleritas",
+    "Graipuss Medussi",
+    "Torrtuginni Dragonfrutini",
+    "Pot Hotspot",
+    "La Grande Combinasion",
+    "Garama and Madundung",
+    "Secret Lucky Block",
+    "Dragon Cannelloni",
+    "Nuclearo Dinossauro",
+    "Las Vaquitas Saturnitas",
+    "Chicleteira Bicicleteira",
+    "Los Combinasionas",
+    "Agarrini la Palini",
+    "Los Hotspotsitos",
+    "Esok Sekolah",
+    "Nooo My Hotspot",
+    "Job Job Job Sahur",
+    "La Supreme Combinasion",
+    "Admin Lucky Block",
+    "Ketupat Kepat",
+    "Strawberry Elephant",
+    "Spaghetti Tualetti",
+    "Ketchuru and Musturu",
+    "Los Nooo My Hotspotsitos",
+    "La Kark56656erkar Combinasion",
+    "Los Bros",
+    "Tralaledon",
+    "Las Sis",
+    "Celularcini Viciosini",
+    "La Extinct Grande",
+    "Los Chicleteiras"
+}
+
 -- Системные переменные
 local camera = workspace.CurrentCamera
 local espCache = {}
