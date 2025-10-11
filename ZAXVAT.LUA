@@ -32,6 +32,9 @@ local OBJECTS = {
     ['Money Money Puggy'] = { emoji = '🐶', important = true, high_priority = true },
     ['Burguro And Fryuro'] = { emoji = '🍔', important = true },
     ['Chillin Chili'] = { emoji = '🌶', important = true, high_priority = true },
+    ['Eviledon'] = { emoji = '👹', important = true },
+    ['La Spooky Grande'] = { emoji = '🎃', important = true },
+    ['Los Mobilis'] = { emoji = '🧕', important = true },
     ['La Secret Combinasion'] = { emoji = '❓', important = true },
 }
 
