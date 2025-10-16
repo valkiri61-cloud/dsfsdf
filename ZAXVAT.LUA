@@ -35,6 +35,13 @@ local OBJECTS = {
     ['La Secret Combinasion'] = { emoji = '❓', important = true },
     ['Eviledon'] = { emoji = '👹', important = true },
     ['Spooky and Pumpky'] = { emoji = '🎃', important = true, },
+    ['Chillin Chili'] = { emoji = '🌶', important = true },
+    ['Tacorita Bicicleta'] = { emoji = '📱', important = false },
+    ['Las Sis'] = { emoji = '👧', important = true },
+    ['Los Bros'] = { emoji = '📱', important = true },
+    ['Esok Sekolah'] = { emoji = '🏠', important = true },
+    ['La Grande Combinasion'] = { emoji = '❗️', important = true },
+    ['Los Combinasionas'] = { emoji = '⚒️', important = true },
 }
 
 -- Создаем списки важных объектов
