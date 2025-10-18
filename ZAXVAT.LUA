@@ -40,7 +40,9 @@ local OBJECTS = {
     ['Las Sis'] = { emoji = '👧', important = true },
     ['Los Bros'] = { emoji = '📱', important = true },
     ['Esok Sekolah'] = { emoji = '🏠', important = true },
+    ['Meowl'] = { emoji = '🐈', important = true },
     ['La Grande Combinasion'] = { emoji = '❗️', important = true },
+    ['Mieteteira Bicicleteira'] = { emoji = '☠️', important = true },
     ['Los Combinasionas'] = { emoji = '⚒️', important = true },
 }
 
