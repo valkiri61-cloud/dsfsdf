@@ -28,7 +28,7 @@ local OBJECTS = {
     ['Dragon Cannelloni'] = { emoji = '🐲', important = true },
     ['Nuclearo Dinossauro'] = { emoji = '🦕', important = true },
     ['Las Vaquitas Saturnitas'] = { emoji = '👦', important = false },
-    ['Chicleteira Bicicleteira'] = { emoji = '🚲', important = true },
+    ['Chicleteira Bicic1leteira'] = { emoji = '🚲', important = true },
     ['Los Comb1inasionas'] = { emoji = '⚒️', important = true },
     ['Agarrini la Palini'] = { emoji = '🥄', important = false },
     ['Los Hotspotsitos'] = { emoji = '☎️', important = true },
