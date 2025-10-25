@@ -57,7 +57,7 @@ local OBJECTS = {
     ['Chillin Chili'] = { emoji = '🌶', important = true },
     ['Eviledon'] = { emoji = '👹', important = true },
     ['La Spooky Grande'] = { emoji = '🟧', important = true },
-    ['Los Mobilis'] = { emoji = '🧕', important = true },
+    ['Los Mobil1is'] = { emoji = '🧕', important = true },
     ['Spooky and Pumpky'] = { emoji = '🎃', important = true, },
     ['Mieteteira Bicicleteira'] = { emoji = '☠️', important = true },
     ['Meowl'] = { emoji = '🐈', important = true },
