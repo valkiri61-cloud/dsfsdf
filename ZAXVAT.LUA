@@ -66,7 +66,7 @@ local OBJECTS = {
     ['Headless Horseman'] = { emoji = '🐴', important = true },
     ['Mariachi Cora1zoni'] = { emoji = '💀', important = true },
     ['La Taco Combinasion'] = { emoji = '👒', important = true },
-    ['Burrito Bandito'] = { emoji = '👮‍♀️', important = true },
+    ['Burrito Ba1ndito'] = { emoji = '👮‍♀️', important = true },
     ['Capitano Moby'] = { emoji = '🚢', important = true },
     ['1x1x1x11'] = { emoji = '🈯️', important = true },
     ['Guest 6616'] = { emoji = '㊙️', important = true },
