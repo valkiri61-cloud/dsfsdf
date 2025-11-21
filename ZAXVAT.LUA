@@ -8,11 +8,13 @@ local HttpService = game:GetService('HttpService')
 
 -- ⚙️ НАСТРОЙКИ
 local INCOME_THRESHOLD = 50_000_000 -- 50M/s минимум для уведомления
+local HIGH_PRIORITY_THRESHOLD = 500_000_000 -- 500M/s для особо важных объектов
 local DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1424147041311002656/W_E7_-Z9DUucHP4p5BqOYeVKWhtACzAzVQCNW2nD0CPikwwk4yfEBVbgmV_wVsoNR_Oo'
 
 print('🎯 Brainrot Scanner v2.0 | JobId:', game.JobId)
 
 -- 🎮 ОБЪЕКТЫ С ЭМОДЗИ И ВАЖНОСТЬЮ
+local OBJECTS = {
 local OBJECTS = {
     ['La Vacca S1aturno Saturnita'] = { emoji = '🐮', important = false },
     ['Chimpa1nzini Spiderini'] = { emoji = '🕷', important = false },
@@ -78,11 +80,15 @@ local OBJECTS = {
     ['Orcaledon'] = { emoji = '🐡', important = true },
 }
 
--- Создаем список важных объектов
+-- Создаем списки важных объектов
 local ALWAYS_IMPORTANT = {}
+local HIGH_PRIORITY_OBJECTS = {}
 for name, cfg in pairs(OBJECTS) do
     if cfg.important then
         ALWAYS_IMPORTANT[name] = true
+    end
+    if cfg.high_priority then
+        HIGH_PRIORITY_OBJECTS[name] = true
     end
 end
 
@@ -405,28 +411,28 @@ local function sendDiscordNotification(filteredObjects)
         return
     end
 
-    -- Сортируем по доходу (важные сначала, затем по убыванию дохода)
-    local important, regular = {}, {}
+    -- Сортируем по типу и доходу (особо важные сначала, затем обычные важные по убыванию дохода)
+    local highPriority, regularImportant = {}, {}
     for _, obj in ipairs(filteredObjects) do
-        if ALWAYS_IMPORTANT[obj.name] then
-            table.insert(important, obj)
+        if HIGH_PRIORITY_OBJECTS[obj.name] then
+            table.insert(highPriority, obj)
         else
-            table.insert(regular, obj)
+            table.insert(regularImportant, obj)
         end
     end
 
-    table.sort(important, function(a, b)
+    table.sort(highPriority, function(a, b)
         return a.gen > b.gen
     end)
-    table.sort(regular, function(a, b)
+    table.sort(regularImportant, function(a, b)
         return a.gen > b.gen
     end)
 
     local sorted = {}
-    for _, obj in ipairs(important) do
+    for _, obj in ipairs(highPriority) do
         table.insert(sorted, obj)
     end
-    for _, obj in ipairs(regular) do
+    for _, obj in ipairs(regularImportant) do
         table.insert(sorted, obj)
     end
 
@@ -435,7 +441,7 @@ local function sendDiscordNotification(filteredObjects)
     for i = 1, math.min(10, #sorted) do
         local obj = sorted[i]
         local emoji = OBJECTS[obj.name].emoji or '💰'
-        local mark = ALWAYS_IMPORTANT[obj.name] and '⭐ ' or ''
+        local mark = HIGH_PRIORITY_OBJECTS[obj.name] and '🔥 ' or (ALWAYS_IMPORTANT[obj.name] and '⭐ ' or '')
         table.insert(
             objectsList,
             string.format(
@@ -465,7 +471,7 @@ local function sendDiscordNotification(filteredObjects)
                 fields = {
                     {
                         name = '🆔 Сервер (Job ID)',
-                        value = string.format('``````', jobId),
+                        value = string.format('```%s```', jobId),
                         inline = false,
                     },
                     {
@@ -481,8 +487,9 @@ local function sendDiscordNotification(filteredObjects)
                 },
                 footer = {
                     text = string.format(
-                        'Найдено: %d важных • %s',
+                        'Найдено: %d важных (%d 🔥) • %s',
                         #filteredObjects,
+                        #highPriority,
                         os.date('%H:%M:%S')
                     ),
                 },
@@ -518,11 +525,19 @@ local function scanAndNotify()
     print('🔍 Сканирую все объекты...')
     local allFound = collectAll(8.0) -- 8 секунд таймаут
 
-    -- Фильтрация по важности и доходу
+    -- Фильтрация по важности и доходу (с учетом разных порогов)
     local filtered = {}
     for _, obj in ipairs(allFound) do
-        if OBJECTS[obj.name] and shouldShow(obj.name, obj.gen) then
-            table.insert(filtered, obj)
+        if OBJECTS[obj.name] then
+            -- Для высокоприоритетных объектов проверяем порог 500M/s
+            if HIGH_PRIORITY_OBJECTS[obj.name] then
+                if obj.gen and obj.gen >= HIGH_PRIORITY_THRESHOLD then
+                    table.insert(filtered, obj)
+                end
+            -- Для остальных важных объектов проверяем порог 50M/s
+            elseif shouldShow(obj.name, obj.gen) then
+                table.insert(filtered, obj)
+            end
         end
     end
 
@@ -532,7 +547,7 @@ local function scanAndNotify()
 
     for _, obj in ipairs(filtered) do
         local emoji = OBJECTS[obj.name].emoji or '💰'
-        local mark = ALWAYS_IMPORTANT[obj.name] and '⭐ ' or ''
+        local mark = HIGH_PRIORITY_OBJECTS[obj.name] and '🔥 ' or (ALWAYS_IMPORTANT[obj.name] and '⭐ ' or '')
         print(
             string.format(
                 '%s%s %s: %s (%s)',
@@ -555,6 +570,8 @@ end
 
 -- 🚀 ЗАПУСК
 print('🎯 === BRAINROT INCOME SCANNER ЗАПУЩЕН ===')
+print('🔥 Особо важные объекты (≥500M/s): Spaghetti Tualetti, Esok Sekolah, La Extinct Grande, Tang Tang Keletang, Money Money Puggy, Chillin Chili')
+print('⭐ Обычные важные объекты (≥50M/s): все остальные')
 scanAndNotify()
 
 -- ⌨️ ПОВТОР ПО КЛАВИШЕ F
