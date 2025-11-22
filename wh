@@ -15,6 +15,7 @@ print('🎯 Brainrot Scanner v2.0 | JobId:', game.JobId)
 
 -- 🎮 ОБЪЕКТЫ С ЭМОДЗИ И ВАЖНОСТЬЮ
 local OBJECTS = {
+    ['W or L'] = { emoji = '🏆', important = true },
     ['Garama and Madundung'] = { emoji = '🍝', important = true },
     ['Dragon Cannelloni'] = { emoji = '🐲', important = true },
     ['Nuclearo Dinossauro'] = { emoji = '🦕', important = true },
