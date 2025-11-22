@@ -15,7 +15,6 @@ print('🎯 Brainrot Scanner v2.0 | JobId:', game.JobId)
 
 -- 🎮 ОБЪЕКТЫ С ЭМОДЗИ И ВАЖНОСТЬЮ
 local OBJECTS = {
-    ['Burrito Bandito'] = { emoji = '👮‍♀️', important = true },
     ['Los Combinasionas'] = { emoji = '⚒️', important = true },
     ['Chicleteira Bicicleteira'] = { emoji = '🚲', important = true },
     ['La Grande Combinasion'] = { emoji = '❗️', important = true },
