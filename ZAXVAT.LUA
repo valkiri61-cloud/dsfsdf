@@ -15,7 +15,6 @@ print('🎯 Brainrot Scanner v2.0 | JobId:', game.JobId)
 
 -- 🎮 ОБЪЕКТЫ С ЭМОДЗИ И ВАЖНОСТЬЮ
 local OBJECTS = {
-    ['Fishino Clownino'] = { emoji = '🤡', important = true },
     ['W or L'] = { emoji = '🏆', important = true },
     ['Garama and Madundung'] = { emoji = '🍝', important = true },
     ['Dragon Cannelloni'] = { emoji = '🐲', important = true },
@@ -25,6 +24,7 @@ local OBJECTS = {
     ['Ketupat Kepat'] = { emoji = '🍏', important = true },
     ['Strawberry Elephant'] = { emoji = '🐘', important = true },
     ['Spaghetti Tualetti'] = { emoji = '🚽', important = true },
+    ['Fishino Clownino'] = { emoji = '🤡', important = true },
     ['Ketchuru and Musturu'] = { emoji = '🍾', important = true },
     ['Tralaledon'] = { emoji = '🦈', important = true },
     ['Tictac Sahur'] = { emoji = '🕰️', important = true },
