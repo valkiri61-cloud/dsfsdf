@@ -50,6 +50,7 @@ local OBJECTS = {
     ['Fragrama and Chocrama'] = { emoji = '🐡', important = true },
     ['Guest 666'] = { emoji = '㊙️', important = true },
     ['Los Primos'] = { emoji = '🙆‍♂️', important = true },
+    ['Gobblino Uniciclino'] = { emoji = '🕊', important = true },
     ['Los Bros'] = { emoji = '📱', important = true },
 }
 
