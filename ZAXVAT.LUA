@@ -51,6 +51,7 @@ local OBJECTS = {
     ['Guest 666'] = { emoji = '㊙️', important = true },
     ['Los Primos'] = { emoji = '🙆‍♂️', important = true },
     ['Los Bros'] = { emoji = '📱', important = true },
+    ['Gobblino Uniciclino'] = { emoji = '🕊', important = true },
 }
 
 -- Создаем списки важных объектов
