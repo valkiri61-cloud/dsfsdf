@@ -29,7 +29,7 @@ local OBJECTS = {
     ['Las Vaquitas Saturnitas'] = { emoji = '👦', important = false },
     ['Agarrini la Palini'] = { emoji = '🥄', important = false },
     ['Los Hotspotsit3os'] = { emoji = '☎️', important = true },
-    ['Esok Sekolah'] = { emoji = '🏠', important = true },
+    ['E1sok Sekolah'] = { emoji = '🏠', important = true },
     ['Nooo My Hot3spot'] = { emoji = '👽', important = false },
     ['La Supreme Combinasion'] = { emoji = '🔫', important = true },
     ['Admin Luc3ky Block'] = { emoji = '🆘', important = false },
