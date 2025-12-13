@@ -10,21 +10,21 @@ local StarterGui = game:GetService("StarterGui")
 -- ⚙️ WEBHOOK SETTINGS BY INCOME RANGE
 local WEBHOOKS = {
 { -- 1M/s - 25M/s
-url = 'https://discord.com/api/webhooks/1448648714393485395/GuIECdoOrz0w-JYADU0mqtQPzmQdp_EHQcNdQWZd7SNRAfD36xanVqItohUzCx5P6Ylo',
+url = 'https://discord.com/api/webhooks/1449098958084247584/2DC20PHyEmiurZxS8roGSEqnszGoTzNKRLgFHai_Cxfra0nTpx5xNYbBaRh4OVqtf68R',
 title = '🟢 Low Income (1-25M/s)',
 color = 0x00ff00,
 min = 1_000_000,
 max = 25_000_000
 },
 { -- 26M/s - 100M/s
-url = 'https://discord.com/api/webhooks/1448672017187471531/xhdPZMeXTGsrVuaWblKnKmaYBjqgXbg5kj85OOtnQerNDloU7aJlM4VrHCIakkej38lK',
+url = 'https://discord.com/api/webhooks/1449099051378409622/OVhVVK3GTpIOhN5kO-61wdj-jGE9iMmjSNiJISq8wP9xKK5FquoXmRTYcQS9kx-2Vgan',
 title = '🟡 Medium Income (26-100M/s)',
 color = 0xffff00,
 min = 26_000_000,
 max = 100_000_000
 },
 { -- 101M/s - 10000M/s
-url = 'https://discord.com/api/webhooks/1448648519622721596/A3_xIswaPEp3MR5JEZem9ebmNVIgvK7H7L4v44cqm1PL5zeEs1IHXNw3ngeVnALkDHV3',
+url = 'https://discord.com/api/webhooks/1449099129543327920/GhfLDP-UsokffIqE_TmFs8kep7q9zXharQhYuj0lzDYJxvnvsCT9jKdUAW7rED7HkvBA',
 title = '🔴 High Income (101M+ /s)',
 color = 0xff0000,
 min = 101_000_000,
@@ -61,29 +61,32 @@ local SPECIAL_BRAINROTS = {
 ['Guest 666'] = 0,
 ['Lavadorito Spinito'] = 100_000_000,
 ['Fishino Clownino'] = 0,
-['Los Chicleteiras'] = 0,
 ['Tacorita Bicicleta'] = 100_000_000,
 ['La Jolly Grande'] = 200_000_000,
-['W or L'] = 300_000_000,
+['W or L'] = 200_000_000,
 ['Los Puggies'] = 300_000_000,
 ['La Taco Combinasion'] = 300_000_000,
 ['Chipso and Queso'] = 200_000_000,
 ['Chipso And Queso'] = 200_000_000,
 ['Mieteteira Bicicleteira'] = 400_000_000,
-['Los Mobilis'] = 450_000_000,
-['La Spooky Grande'] = 400_000_000,
+['Los Mobilis'] = 400_000_000,
+['La Spooky Grande'] = 200_000_000,
 ['Eviledon'] = 189_000_000,
-['Chillin Chili'] = 300_000_000,
-['Money Money Puggy'] = 300_000_000,
+['Chillin Chili'] = 25_000_000,
+['Money Money Puggy'] = 200_000_000,
 ['Tang Tang Keletang'] = 100_000_000,
 ['Los Primos'] = 300_000_000,
 ['Orcaledon'] = 200_000_000,
 ['Las Sis'] = 300_000_000,
-['La Extinct Grande'] = 300_000_000,
-['Los Bros'] = 300_000_000,
+['La Extinct Grande'] = 200_000_000,
+['Los Bros'] = 200_000_000,
 ['Spaghetti Tualetti'] = 300_000_000,
 ['Esok Sekolah'] = 300_000_000,
 ['Nuclearo Dinossauro'] = 100_000_000,
+['Lavadorito Spinito'] = 0,
+['La Ginger Sekolah'] = 100_000_000,
+['Gingerat Gerat'] = 0,
+['-'] = 100_000_000,
 }
 
 print('🎯 Brainrot Scanner v2.1 | JobId:', game.JobId)
@@ -179,6 +182,10 @@ local OBJECTS = {
 ['Cuadramat and Pakrahmatmamat'] = { emoji = '🧮', important = true },
 ['Los Cucarachas'] = { emoji = '🪳', important = true },
 ['1x1x1x1'] = { emoji = '💾', important = true },
+['La Ginger Sekolah'] = { emoji = '🎁', important = true },
+['Gingerat Gerat'] = { emoji = '🥮', important = true },
+['La Ginger Sekolah'] = { emoji = '🦌', important = true },
+['Gingerat Gerat'] = { emoji = '🍬', important = true },
 }
 
 -- IMPORTANT OBJECTS TABLE
